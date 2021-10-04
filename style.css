@@ -8,6 +8,10 @@
 #red{
     text-align: center;
     color: red;
+    /*adding in stuff from CSS resource*/
+    max-width: 400px;
+    width: 200px;
+    margin: 0 auto;
 }
 
 .blue{
@@ -53,8 +57,8 @@ div, p {
     color: blue;
 }
 
-body {background-color:#00ff00;}
-#p1 {background-color:#ff0000;}
+/* body {background-color:#00ff00;}
+#p1 {background-color:#ff0000;} */
   
 	
 div {
@@ -62,9 +66,10 @@ div {
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px;
-    /*can also be combined: 50px 30px 50px 80px; top bottom left right*/
+    /*can also be combined: margin: 50px 30px 50px 80px; clockwise*/
 }
 
+/*element.(using class) class*/
 p.dotted {border-style: dotted;}
 p.dashed {border-style: dashed;}
 p.solid {border-style: solid;}
@@ -76,3 +81,190 @@ p.outset {border-style: outset;}
 p.none {border-style: none;}
 p.hidden {border-style: hidden;}
 p.mix {border-style: dotted dashed solid double;}
+
+.div1{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+	
+.rcorners1 {
+    border-radius: 15px 50px 30px 5px;
+    background: #73AD21;
+    padding: 20px;
+    margin:20px;
+    width: 200px;
+    height: 150px;
+}
+   
+.rcorners2 {
+    border-radius: 15px 50px 30px;
+    background: #73AD21;
+    padding: 20px;
+    margin:20px;
+    width: 200px;
+    height: 150px;
+}
+   
+.rcorners3 {
+    border-radius: 15px / 50px;
+    background: #73AD21;
+    padding: 20px;
+    margin:20px;
+    width: 200px;
+    height: 150px;
+}
+
+.rcorners4{
+    border-radius: 50%;
+    background: #73AD21;
+    padding: 20px;
+    margin:20px;
+    width: 200px;
+    height: 150px;
+}
+
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+  }
+  	
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+	
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+}
+	
+div.sticky {
+  position: -webkit-sticky; /* Needed for Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+img {
+  position: absolute; /*mess with the position and can make the image/textbox same with the use 
+  of overflow: auto*/
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+img.block-image {
+    display: block;
+}
+  
+li.inline-list {
+    display: inline;
+}
+  
+div.hidden-div{
+    display: none;
+}
+  
+img.invisible-image{
+    visibility: hidden;
+}
+
+.simple{
+    width: 500px;
+    margin: 20px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fancy{
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border-width: 10px;
+    border: solid blue 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+/*can also do this: 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*/
+
+.box {
+    /* float: left; float is commonly used */
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+    /*creating multiple boxes*/
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+}
+
+.after-box{
+    clear: left;
+}
+
+/*responsive design
+when on different devices @media inquires are most powerful for responsive design
+example:
+@media (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+@media (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}
+*/
+
+/*for manipulating columns
+.three-column {
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
+}
+*/
+
+/*can also manipulate the layout with flexbox
+.container {
+  display: -webkit-flex;
+  display: flex;
+}
+nav {
+  width: 200px;
+}
+.flex-column {
+  -webkit-flex: 1;
+          flex: 1;
+}*/
+
